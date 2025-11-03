@@ -1,0 +1,21 @@
+@charset 'utf-8';
+
+.casepage{padding: 46px 0;}
+.casepage .caselist{}
+.casepage .caselist .list{width: 32%; float: left; margin: 0 2% 30px 0; background: #fff; border-radius: 10px; overflow: hidden; transition: all 0.5s;}
+.casepage .caselist .list:nth-child(3n){margin-right: 0;}
+.casepage .caselist .list .picture{overflow: hidden;}
+.casepage .caselist .list .picture img{width: 100%; transform: scale(1.1); transition: all 0.5s;}
+.casepage .caselist .list .picture:hover img{transform: scale(1.3);}
+.casepage .caselist .list .title{font-size: 20px; font-family: 'Poppins'; line-height: 24px; padding: 24px 38px; background: #c12c28; color: #fff;}
+.casepage .caselist .list .title a{color: #fff;}
+
+@media (max-width:960px) {
+	.casepage{padding: 30px 15px}
+	.casepage .caselist{}
+	.casepage .caselist .list{width: 48%; float: left; margin-right: 4%; margin-bottom: 20px;}
+	.casepage .caselist .list:nth-child(3n){margin-right: 4%;}
+	.casepage .caselist .list:nth-child(2n){margin-right: 0;}
+	.casepage .caselist .list .title{padding: 5px 10px;}
+	.casepage .caselist .list .title a{font-size: 14px;}
+}

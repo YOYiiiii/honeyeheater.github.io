@@ -1,0 +1,13 @@
+@charset 'utf-8';
+
+.factorypage{padding: 50px 0;}
+.factorypage .name{font-size: 52px; text-align: center; font-family: 'Poppins SemiBold'; color: #0e0e0e;}
+.factorypage .content{margin-top: 30px;}
+.factorypage .content img{max-width: 100%; height: auto;}
+.factorypage .content table{max-width: 100%; border-collapse: collapse;}
+
+@media (max-width:960px) {
+	.factorypage{padding: 30px 15px}
+	.factorypage .name{font-size: 20px;}
+	.factorypage .content{margin-top: 20px;}
+}

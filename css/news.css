@@ -1,0 +1,30 @@
+@charset 'utf-8';
+
+.news{padding: 50px 0;}
+.news .list{background: #fff; border: solid #eaeaea 1px; padding: 20px; margin-bottom: 30px;}
+.news .list:hover{box-shadow: 0 0 5px 5px #eaeaea;}
+.news .list::after{content: ''; display: table; clear: both;}
+.news .list .picture{width: 150px; height: 150px; float: left; overflow: hidden;}
+.news .list .picture img{width: 100%; position: relative; top: 50%; transform: translateY(-50%); transition: all 0.5s;}
+.news .list:hover .picture img{transform: scale(1.1) translateY(-50%);}
+.news .list .content{width: calc(100% - 180px); float: right;}
+.news .list .text{font-size: 16px; font-family: 'Poppins Light'; color: #5b5b5b; line-height: 24px;}
+.news .list .title{margin-top: 10px;}
+.news .list .title a{font-size: 18px; line-height: 28px; color: #000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.news .list .date{font-size: 16px; color: #636363; margin-top: 10px;}
+.news .list .button{margin-top: 10px;}
+.news .list .button a{font-size: 18px; font-family: 'Poppins SemiBold'; color: #c22a29;}
+
+@media (max-width:960px) {
+	.news{padding: 10px 15px 30px;}
+	.news .list{border: none; border-bottom: solid #eaeaea 1px; padding: 20px 0 10px; margin-bottom: 0;}
+	.news .list .picture{width: 100%; height: 150px;}
+	.news .list .picture img{position: relative; top: 50%; transform: translateY(-50%);}
+	.news .list .content{width: 100%;}
+	.news .list .text{font-size: 14px; margin-top: 10px;}
+	.news .list .title{margin-top: 10px;}
+	.news .list .title a{font-size: 16px; height: 48px; line-height: 24px;}
+	.news .list .date{font-size: 14px; margin-top: 10px;}
+	.news .list .button{margin-top: 10px;}
+	.news .list .button a{font-size: 14px;}
+}

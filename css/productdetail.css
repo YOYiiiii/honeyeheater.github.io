@@ -1,0 +1,91 @@
+@charset 'utf-8';
+
+.productdetail{padding: 50px 0;}
+.productdetail .contentdetail{}
+.productdetail .contentdetail .picture{width: 502px; float: left;}
+.productdetail .contentdetail .picture .bigpicture{width: 500px; max-width: 100%; border: solid #e5e5e5 1px;}
+.productdetail .contentdetail .picture .bigpicture img{width: 100%;}
+.productdetail .contentdetail .picture .thumbnail{margin-top: 30px;}
+.productdetail .contentdetail .picture .thumbnail{margin-top: 30px;}
+.productdetail .contentdetail .picture .thumbnail .button{width: 25px; height: 82px; float: left;}
+.productdetail .contentdetail .picture .thumbnail .button a{display: block; text-align: center; line-height: 80px; font-family: cursive, fangsong; font-size: 30px; font-weight: bold; color: #d9d9d9;}
+.productdetail .contentdetail .picture .thumbnail .button a:hover{color: #999;}
+.productdetail .contentdetail .picture .thumbnail .imglist{max-width: calc(100% - 60px); float: left; overflow: hidden; box-sizing: border-box; margin: 0 5px;}
+.productdetail .contentdetail .picture .thumbnail .imglist ul{width: max-content;}
+.productdetail .contentdetail .picture .thumbnail .imglist li{width: 76px; float: left; margin: 0 5px; border: solid #eee 1px; cursor: pointer;}
+.productdetail .contentdetail .picture .thumbnail .imglist li img{width: 100%;}
+.productdetail .contentdetail .picture .thumbnail .imglist li.current{border-color: #c22a29;}
+
+.productdetail .contentdetail .abstract{width: calc(100% - 550px); float: right;}
+.productdetail .contentdetail .abstract .name{padding: 20px 0; border-bottom: dashed #e5e5e5 1px;}
+.productdetail .contentdetail .abstract .name h1{font-size: 34px;}
+.productdetail .contentdetail .abstract .describe{margin-top: 20px; line-height: 28px;}
+.productdetail .contentdetail .abstract .consult{margin-top: 20px;}
+.productdetail .contentdetail .abstract .consult a{height: 42px; display: inline-block; padding: 0 20px; line-height: 42px; background: #c22a29; color: #fff; border-radius: 5px; margin-right: 20px;}
+.productdetail .contentdetail .abstract .consult a img{vertical-align: middle;}
+.productdetail .contentdetail .productdetailtitle{margin-top: 20px; border-bottom: solid #e8e8e8 1px;}
+.productdetail .contentdetail .productdetailtitle h3{font-size: 18px; padding: 0 20px; line-height: 42px;}
+.productdetail .contentdetail .productdetailcontent{margin-top: 30px; line-height: 30px;}
+.productdetail .contentdetail .productdetailcontent table{max-width: 100%; border-collapse: collapse;}
+.productdetail .contentdetail .productdetailcontent table td{padding: 5px 10px; border: solid #e8e8e8 1px;}
+.productdetail .contentdetail .productdetailcontent img{max-width: 100%; height: auto !important;}
+
+.productdetailtab{margin-top: 50px;}
+.productdetailtab .productdetailtabli{border-bottom: 1px solid #e6e6e6; line-height: 46px;}
+.productdetailtab .productdetailtabli::after{content: ''; display: table; clear: both;}
+.productdetailtab .productdetailtabli li{float: left; margin: 0 20px; font-size: 16px; font-weight: bold; cursor: pointer; position: relative;}
+.productdetailtab .productdetailtabli li.current::after{width: 100%; height: 2px; content: ''; background: #c22a29; position: absolute; left: 0; bottom: -1px;}
+.productdetailtab .productdetailtabbox{padding: 20px 0;}
+.productdetailtab .productdetailtabbox .productdetailtabcon{display: none;}
+.productdetailtab .productdetailtabbox .productdetailtabcon.show{display: block;}
+.productdetailtab .productdetailtabbox .productdetailtabcon img{max-width: 100%;}
+.productdetailtab .productdetailtabbox .productdetailtabcon table{max-width: 100%; border-collapse: collapse;}
+.productdetailtab .productdetailtabbox .productdetailtabcon table td{padding: 8px 10px;}
+.productdetailtab .productdetailtabbox .productdetailtabcon ul{padding-left: 20px;}
+.productdetailtab .productdetailtabbox .productdetailtabcon ol{padding-left: 20px;}
+.productdetailtab .productdetailtabbox .productdetailtabcon li{list-style: inherit;}
+
+.productdetail .contentdetail .relatedproducts{margin-top: 50px;}
+.productdetail .contentdetail .relatedproducts .title{border-bottom: solid #e6e6e6 1px;}
+.productdetail .contentdetail .relatedproducts .title h3{font-size: 18px; padding: 0 20px; line-height: 42px;}
+.productdetail .contentdetail .relatedproducts .relatedlist{margin-top: 30px;}
+.productdetail .contentdetail .relatedproducts .relatedlist::after{content: ''; display: table; clear: both;}
+.productdetail .contentdetail .relatedproducts .relatedlist .list{width: 23.5%; float: left; margin-right: 2%;}
+.productdetail .contentdetail .relatedproducts .relatedlist .list:nth-child(4){margin-right: 0;}
+.productdetail .contentdetail .relatedproducts .relatedlist .list .image{overflow: hidden;}
+.productdetail .contentdetail .relatedproducts .relatedlist .list .image img{width: 100%; transition: all 0.5s;}
+.productdetail .contentdetail .relatedproducts .relatedlist .list:hover .image img{transform: scale(1.1);}
+.productdetail .contentdetail .relatedproducts .relatedlist .list .name{text-align: center; padding: 10px;}
+.productdetail .contentdetail .relatedproducts .relatedlist .list .name a{font-size: 16px; line-height: 22px;}
+
+
+@media (max-width:960px) {
+	.productdetail{padding: 30px 15px;}
+	.productdetail .contentdetail .picture{width: 100%; float: left;}
+	.productdetail .contentdetail .picture .bigpicture{border: solid #e5e5e5 1px;}
+	.productdetail .contentdetail .picture .bigpicture img{width: 100%;}
+	.productdetail .contentdetail .picture .zoomdiv{display: none !important;}
+	.productdetail .contentdetail .picture .jqZoomPup{display: none !important;}
+	.productdetail .contentdetail .picture .thumbnail{margin-top: 30px;}
+	.productdetail .contentdetail .picture .thumbnail .button{width: 25px; height: 62px; float: left;}
+	.productdetail .contentdetail .picture .thumbnail .button a{display: block; text-align: center; line-height: 60px; font-family: cursive, fangsong; font-size: 26px; font-weight: bold; color: #d9d9d9;}
+	.productdetail .contentdetail .picture .thumbnail .imglist li{width: 60px;}
+	
+	.productdetail .contentdetail .abstract{width: 100%; float: right;}
+	.productdetail .contentdetail .abstract .name{padding: 20px 0 10px; border-bottom: dashed #e5e5e5 1px;}
+	.productdetail .contentdetail .abstract .name h1{font-size: 20px;}
+	.productdetail .contentdetail .abstract .describe{margin-top: 20px; line-height: 28px;}
+	.productdetail .contentdetail .abstract .consult{margin-top: 20px;}
+	.productdetail .contentdetail .abstract .consult a{height: 42px; display: inline-block; padding: 0 20px; line-height: 42px; background: #c22a29; color: #fff; border-radius: 5px; transition: all 0.3s; margin-right: 20px;}
+	.productdetail .contentdetail .abstract .consult a img{vertical-align: middle;}
+	.productdetail .contentdetail .productdetailtabli{border-bottom: none;}
+	.productdetail .contentdetail .productdetailtabli li{width: 50%; border-bottom: solid #e5e5e5 1px; text-align: center; font-size: 14px; margin: 0;}
+	.productdetail .contentdetail .productdetailtabcon table{max-width: 100%; margin: 0 auto; border-collapse: collapse;}
+	.productdetail .contentdetail .productdetailtabcon img{max-width: 100%; width: 100% !important; height: auto !important;}
+	.productdetail .contentdetail .productdetailtabcon p{padding: 5px 0;}
+	
+	.productdetail .contentdetail .relatedproducts .relatedlist .list{width: 48%; float: left; margin-right: 4%; margin-bottom: 20px;}
+	.productdetail .contentdetail .relatedproducts .relatedlist .list:nth-child(2n){margin-right: 0;}
+	.productdetail .contentdetail .relatedproducts .relatedlist .list .name{padding: 5px;}
+	.productdetail .contentdetail .relatedproducts .relatedlist .list .name a{font-size: 13px; line-height: 18px;}
+}

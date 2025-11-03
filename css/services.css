@@ -1,0 +1,63 @@
+@charset 'utf-8';
+
+.servicepage{}
+.servicepage .servicecontent{padding: 50px 0;}
+.servicepage .servicecontent:nth-child(even){background: #f9fafc;}
+.servicepage .servicecontent .name{font-size: 52px; text-align: center; font-family: 'Poppins SemiBold'; color: #0e0e0e;}
+.servicepage .servicecontent .detail{margin-top: 30px;}
+.servicepage .servicecontent .detail img{max-width: 100%; height: auto;}
+.servicepage .servicecontent .detail table{max-width: 100%; border-collapse: collapse;}
+
+.servicepage .servicecontent .choose_content{display: flex; flex-wrap: wrap; justify-content: space-between;}
+.servicepage .servicecontent .choose_content .list{width: 49%; display: flex; justify-content: space-between; background: #f9fafc; box-sizing: border-box; padding: 30px 20px 30px 30px; margin-bottom: 40px;}
+.servicepage .servicecontent .choose_content .list .icon{width: 73px; height: 73px; text-align: center;}
+.servicepage .servicecontent .choose_content .list .icon img{height: 100%;}
+.servicepage .servicecontent .choose_content .list:hover .icon img{transition: all 1s; transform: rotateY(360deg);}
+.servicepage .servicecontent .choose_content .list .content{width: calc(100% - 108px);} 
+.servicepage .servicecontent .choose_content .list .content .title{font-size: 22px; font-family: 'Poppins Bold'; line-height: 24px; color: #000;}
+.servicepage .servicecontent .choose_content .list .content .text{font-size: 16px; line-height: 24px; color: #6b6b6b; margin-top: 10px;}
+
+.servicepage .toolsbox{}
+.servicepage .toolstab{width: 38.2%; min-width: 430px; max-width: 100%; background: #fff; float: left;}
+.servicepage .toolstab .nav{font-size: 14px; line-height: 46px; padding: 0 20px; cursor: pointer; position: relative;}
+.servicepage .toolstab .nav::before{width: 8px; height: 1px; content: ''; background: #333; position: absolute; right: 20px; top: 20px; transform: rotate(45deg);}
+.servicepage .toolstab .nav::after{width: 8px; height: 1px; content: ''; background: #333; position: absolute; right: 20px; top: 25px; transform: rotate(-45deg);}
+.servicepage .toolstab .nav.current{background: #c12c28; color: #fff}
+.servicepage .toolstab .nav.current::before{background: #fff;}
+.servicepage .toolstab .nav.current::after{background: #fff;}
+.servicepage .toolslist{width: 61.8%; min-width: 530px; max-width: 100%; box-sizing: border-box; float: left; border: solid #c12c28 1px; padding: 20px 30px;}
+.servicepage .toolslist .item{display: none;}
+.servicepage .toolslist .item.show{display: block;}
+.servicepage .toolslist .item .title{font-size: 16px; font-weight: bold; line-height: 36px;}
+.servicepage .toolslist .item .tlist{padding: 10px 0;}
+.servicepage .toolslist .item .tlist input{width: 100%; height: 36px; display: block; box-sizing: border-box; padding: 0 10px; margin-top: 6px; border: solid #e5e5e5 1px; border-radius: 3px;}
+.servicepage .toolslist .item .button{margin-top: 10px;}
+.servicepage .toolslist .item .button button{height: 36px; padding: 0 32px; background: #c12c28; color: #fff; border: none; border-radius: 18px; cursor: pointer;}
+.servicepage .toolslist .item .tips{line-height: 32px; color: #c12c28; margin-top: 20px; display: none;}
+.servicepage .toolslist .item .result{margin-top: 20px; display: none;}
+.servicepage .toolslist .item .result p{font-size: 16px; line-height: 32px;}
+
+@media (max-width:960px) {
+	.servicepage .servicecontent{padding: 30px 15px}
+	
+	.servicepage .servicecontent .name{font-size: 20px;}
+	.servicepage .servicecontent .detail{margin-top: 20px;}
+	.servicepage .servicecontent .list{width: 100%; display: block; padding: 20px 20px; margin-bottom: 20px;}
+	.servicepage .servicecontent .list .icon{width: 100%; height: 46px;}
+	.servicepage .servicecontent .list .content{width: 100%; margin-top: 20px;}
+	.servicepage .servicecontent .list .content .title{font-size: 14px; line-height: 22px;}
+	.servicepage .servicecontent .list .content .text{font-size: 12px; line-height: 20px;}
+	
+	.servicepage .servicecontent .choose_content{margin-top: 20px; display: block;}
+	.servicepage .servicecontent .choose_content .list{width: 100%; display: block; padding: 20px 20px; margin-bottom: 20px;}
+	.servicepage .servicecontent .choose_content .list .icon{width: 100%; height: 46px;}
+	.servicepage .servicecontent .choose_content .list .content{width: 100%; margin-top: 20px;}
+	.servicepage .servicecontent .choose_content .list .content .title{font-size: 14px; line-height: 22px;}
+	.servicepage .servicecontent .choose_content .list .content .text{font-size: 12px; line-height: 20px;}
+	
+	.servicepage .toolstab{width: 100%; min-width: 100%;}
+	.servicepage .toolstab .nav{font-size: 12px; line-height: 46px; padding: 0 10px;}
+	.servicepage .toolstab .nav::before{right: 10px; top: 20px;}
+	.servicepage .toolstab .nav::after{right: 10px; top: 25px;}
+	.servicepage .toolslist{width: 100%; padding: 10px; min-width: auto;}
+}

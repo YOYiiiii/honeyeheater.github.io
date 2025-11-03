@@ -1,0 +1,50 @@
+@charset 'utf-8';
+
+.com_title{text-align: center;}
+
+.aboutcompany{padding: 50px 0;}
+.aboutcompany .companycontent{margin-top: 30px; font-size: 18px; line-height: 32px;}
+.aboutcompany .companycontent img{max-width: 100%; height: auto;}
+.aboutcompany .companycontent h4{font-size: 22px; line-height: 26px; color: #c22a29;}
+.aboutcompany .companycontent p{font-size: 16px; line-height: 28px; color: #191919; padding: 10px 0;}
+
+.aboutcore{padding: 50px 0 60px; background: #c22a29;}
+.aboutcore .com_title{text-align: center;}
+.aboutcore .com_title h2{color: #fff;}
+.aboutcore .com_title p{color: #fff;}
+.aboutcore .core_content{margin-top: 50px;}
+.aboutcore .core_content ul{display: flex; justify-content: space-between;}
+.aboutcore .core_content ul li{width: 18%; text-align: center;}
+.aboutcore .core_content ul li h3{font-size: 66px; color: #fff; line-height: 66px;}
+.aboutcore .core_content ul li p{font-size: 18px; color: #fff;}
+
+.aboutenviron{padding: 50px 0 60px; background: #f7f7f7;}
+.aboutenviron .environswiper{padding-bottom: 70px; margin-top: 50px; position: relative; overflow: hidden;}
+.aboutenviron .environswiper .swiper-slide img{width: 100%;}
+.aboutenviron .environswiper .swiper-pagination{bottom: 0;}
+.aboutenviron .environswiper .swiper-pagination .swiper-pagination-bullet{width: 12px; height: 12px; margin: 0 8px; border-radius: 0; background: #e0a0a0; opacity: 1; cursor: pointer;}
+.aboutenviron .environswiper .swiper-pagination .swiper-pagination-bullet-active{height: 23px; background: #c22a29;}
+
+.aboutcertificate{padding: 50px 0 100px;}
+.aboutcertificate .certificateswiper{margin-top: 50px; overflow: hidden;}
+.aboutcertificate .certificateswiper .swiper-slide img{width: 100%; height: auto !important;}
+
+@media (max-width:960px) {
+	.aboutcompany{padding: 30px 15px;}
+	.aboutcompany .companycontent{margin-top: 10px; font-size: 16px; line-height: 26px;}
+	.aboutcompany .companycontent img{max-width: 100%; height: auto;}
+	.aboutcompany .companycontent p{text-align: justify;}
+
+	.aboutcore{padding: 30px 15px 10px;}
+	.aboutcore .core_content{margin-top: 20px;}
+	.aboutcore .core_content ul{flex-wrap: wrap;}
+	.aboutcore .core_content ul li{width: 50%; margin-bottom: 20px;}
+	.aboutcore .core_content ul li h3{font-size: 24px; line-height: 36px;}
+	.aboutcore .core_content ul li p{font-size: 14px;}
+
+	.aboutenviron{padding: 30px 0;}
+	.aboutenviron .environswiper{padding-bottom: 60px; margin-top: 30px;}
+	
+	.aboutcertificate{padding: 30px 0}
+	.aboutcertificate .certificateswiper{margin-top: 30px;}
+}

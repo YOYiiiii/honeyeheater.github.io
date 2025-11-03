@@ -1,0 +1,11 @@
+@charset 'utf-8';
+
+.contactus{padding: 60px 0;}
+.contactus .contactcontent{margin-top: 30px;}
+.contactus .contactcontent p{font-size: 18px; line-height: 2;}
+.contactus .contactcontent img{max-width: 100%;}
+.contactus .contactcontent table{max-width: 100%; border-collapse: collapse;}
+
+@media (max-width:960px) {
+	.contactus{padding: 30px 15px;}
+}

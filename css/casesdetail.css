@@ -1,0 +1,16 @@
+@charset 'utf-8';
+
+.casedetail{}
+.casedetail .contentlist{padding: 46px 0;}
+.casedetail .contentlist:nth-child(even){background: #f6f6f6;}
+.casedetail .contentlist .title{text-align: center;}
+.casedetail .contentlist .title h2{font-size: 32px;}
+.casedetail .contentlist .content table{max-width: 100%; border-collapse: collapse;}
+.casedetail .contentlist .content table td{border: solid #e6e6e6 1px; padding: 5px 10px;}
+.casedetail .contentlist .content img{max-width: 100%;}
+.casedetail .contentlist .content p{font-size: 16px; line-height: 2em;}
+
+@media (max-width:960px) {
+	.casedetail .contentlist{padding: 30px 15px;}
+	.casedetail .contentlist .title h2{font-size: 24px;}
+}

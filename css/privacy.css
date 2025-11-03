@@ -1,0 +1,11 @@
+@charset 'utf-8';
+
+.privacy{padding: 60px 0;}
+.privacy .privacycontent{font-size: 18px; line-height: 32px;}
+.privacy .privacycontent img{max-width: 100%; height: auto;}
+.privacy .privacycontent table{max-width: 100%; border-collapse: collapse;}
+
+@media (max-width:960px) {
+	.privacy{padding: 30px 15px;}
+	.privacy .privacycontent{font-size: 16px; line-height: 26px;}
+}
