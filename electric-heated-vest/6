@@ -16,7 +16,7 @@
 <meta property="og:description" content="Heated Vest is an apparel product that combines warmth and technology to provide the wearer with constant warmth through a built-in heating element, especially for cold seasons or outdoor activities.">
 <meta property="og:url" content="https://www.honeyeheater.com/electric-heated-vest/6">
 <meta property="og:site_name" content="Dongguan honeye electrothermal technology Co., ltd.">
-<meta property="og:image" content="https://www.honeyeheater.com/upload/20240801/马甲-主图.jpg">
+<meta property="og:image" content="../upload/20240801/mj.jpg">
 <link rel="canonical" href="6">
 <link href="../css/swiper.min.css" rel="stylesheet" type="text/css">
 <link href="../css/en_common.css" rel="stylesheet" type="text/css">
@@ -314,12 +314,12 @@
       
       <div class="contentdetail">
         <div class="picture">
-          <div class="bigpicture jqzoom"><img src="https://www.honeyeheater.com/upload/20240801/马甲-主图.jpg" alt="Heated Vest" jqimg="https://www.honeyeheater.com/upload/20240801/马甲-主图.jpg" title="Heated Vest"></div>
+          <div class="bigpicture jqzoom"><img src="../upload/20240801/mj.jpg" alt="Heated Vest" jqimg="../upload/20240801/mj.jpg" title="Heated Vest"></div>
           <div class="thumbnail">
             <div class="button"><a href="javascript:void(0);" class="previous">&lt;</a></div>
             <div class="imglist">
               <ul>
-                <li class="current"><img src="https://www.honeyeheater.com/upload/20240801/马甲-主图.jpg" alt="Heated Vest" /></li>
+                <li class="current"><img src="../upload/20240801/mj.jpg" alt="Heated Vest" /></li>
                 <li><img src="../upload/20240815/091030_36439.jpg"></li><li><img src="../upload/20240815/091030_80038.jpg"></li><li><img src="../upload/20240815/091030_93762.jpg"></li><li><img src="../upload/20240815/091030_63069.jpg"></li>                <div class="clear"></div>
               </ul>
             </div>
