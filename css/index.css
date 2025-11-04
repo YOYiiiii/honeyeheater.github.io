@@ -23,15 +23,21 @@
 
 .index_product{padding: 50px 0 60px; background: #f5f5f5;}
 .index_product .productSwiper{margin-top: 50px; position: relative; overflow: hidden;}
-.index_product .productSwiper .picture{border-radius: 15px; overflow: hidden;}
-.index_product .productSwiper .picture img{width: 100%; transition: all 0.5s;}
+.index_product .productSwiper .swiper-wrapper{display: flex; flex-wrap: nowrap;}
+.index_product .productSwiper .swiper-slide{width: 25% !important; position: relative;}
+.index_product .productSwiper .picture{border-radius: 15px; overflow: hidden; text-align: center;}
+.index_product .productSwiper .picture img{width: 100% !important; max-width: 300px !important; height: auto !important; margin: 0 auto !important; display: block !important; transition: all 0.5s;}
 .index_product .productSwiper .picture:hover img{transform: scale(1.1);}
-.index_product .productSwiper .title{margin-top: 10px;}
+.index_product .productSwiper .title{margin-top: 10px; text-align: center;}
 .index_product .productSwiper .title a{font-size: 20px; line-height: 24px; color: #c22a29;}
-.index_product .productSwiper .text{margin-top: 5px; height: 120px;}
+.index_product .productSwiper .text{margin-top: 5px; height: 120px; text-align: center; padding: 0 20px;}
 .index_product .productSwiper .text a{font-size: 14px; line-height: 24px; color: #656565; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 5; overflow: hidden; text-overflow: ellipsis;}
-.index_product .productSwiper .button{margin-top: 10px;}
+.index_product .productSwiper .button{margin-top: 10px; text-align: center;}
 .index_product .productSwiper .button a{display: inline-block; line-height: 36px; font-size: 18px; padding: 0 25px; background: #c22a29; color: #fff; border-radius: 18px;}
+/* 显示轮播控件 */
+.index_product .swiper-pagination,
+.index_product .swiper-button-prev,
+.index_product .swiper-button-next{display: block !important;}
 
 .index_choose{padding: 50px 0 60px;}
 .index_choose .com_title p{max-width: 1200px;}
@@ -67,33 +73,332 @@
 
 .index_partner{padding: 50px 0; background: #f5f5f5;}
 .index_partner .com_title{text-align: center;}
-.index_partner .partnerSwiper{margin-top: 50px; padding-bottom: 60px; position: relative; overflow: hidden;}
-.index_partner .partnerSwiper .picture{box-shadow: 0 0 10px 10px #eee;}
-.index_partner .partnerSwiper .picture img{width: 100%;}
-.index_partner .swiper-pagination{bottom: 0;}
-.index_partner .swiper-pagination .swiper-pagination-bullet{width: 8px; height: 8px; margin: 0 6px !important; border-radius: 4px; background: #c22a29; cursor: pointer; transition: all 0.5s;}
-.index_partner .swiper-pagination .swiper-pagination-bullet-active{width: 26px;}
+.index_partner .partnerSwiper{margin-top: 50px; padding-bottom: 20px; position: relative; overflow: visible;}
+.index_partner .partnerSwiper .swiper-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.index_partner .partnerSwiper .swiper-slide{
+    width: 31% !important;
+    margin-bottom: 30px;
+}
+.index_partner .partnerSwiper .picture{box-shadow: 0 0 10px 10px #eee; padding: 20px; text-align: center;}
+.index_partner .partnerSwiper .picture img{width: 100% !important; max-width: 200px !important; height: auto !important; margin: 0 auto !important; display: block !important;}
+/* 隐藏轮播控件 */
+.index_partner .swiper-pagination,
+.index_partner .swiper-button-prev,
+.index_partner .swiper-button-next{
+    display: none !important;
+}
 
 .index_qualification{padding: 50px 0 60px;}
 .index_qualification .com_title{text-align: center;}
-.index_qualification .qualificationbox{padding-left: 55px; position: relative;}
-.index_qualification .qualificationSwiper{margin-top: 50px; padding-right: 55px; overflow: hidden;}
-.index_qualification .qualificationSwiper .swiper-wrapper{align-items: flex-end;}
-.index_qualification .qualificationSwiper .swiper-slide{align-items: flex-end;}
-.index_qualification .qualificationSwiper .swiper-slide .picture{transition: all 0.5s; height: 100%; transform: scale(0.9);}
-.index_qualification .qualificationSwiper .swiper-slide-active{margin-right: 55px;}
-.index_qualification .qualificationSwiper .swiper-slide-active .picture{transform: scale(1);}
-.index_qualification .qualificationSwiper .picture img{width: 100%;}
-.index_qualification .qualificationSwiper .swiper-button{width: calc(0.28*1345px + 55px); position: absolute; top: 50%; left: 0;}
-@media (max-width:1400px) {
-	.index_qualification .qualificationSwiper .swiper-button{width: calc(0.28*1345/1400*100vw + 55px); position: absolute; top: 50%; left: 0;}
+.index_qualification .qualificationbox{position: relative; padding: 0;}
+.index_qualification .qualificationSwiper{
+    margin-top: 50px;
+    overflow: visible;
+    position: relative;
+    width: 100%;
+    height: auto;
 }
+
+.index_qualification .qualificationSwiper .swiper-wrapper{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.index_qualification .qualificationSwiper .swiper-slide{
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 360px; /* 非活动幻灯片宽度，加大2倍 */
+    opacity: 0.5; /* 50%透明度 */
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    margin: 0;
+}
+
+.index_qualification .qualificationSwiper .swiper-slide.swiper-slide-active{
+    max-width: 500px; /* 中间最大，加大2倍 */
+    opacity: 1; /* 完全显示 */
+    z-index: 3;
+    transform: scale(1.2); /* 放大效果 */
+}
+
+/* 相邻幻灯片样式 */
+.index_qualification .qualificationSwiper .swiper-slide.swiper-slide-next,
+.index_qualification .qualificationSwiper .swiper-slide.swiper-slide-prev {
+    max-width: 400px; /* 相邻幻灯片宽度，加大2倍 */
+    opacity: 0.7;
+    z-index: 2;
+    transform: scale(1.05);
+}
+
+/* 移除固定宽度限制，让Swiper自然处理相邻幻灯片 */
+.index_qualification .qualificationSwiper .picture{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.index_qualification .qualificationSwiper .picture img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 300px; /* 调整最大高度，加大2倍 */
+}
+
+/* 轮播按钮样式 - 正确定位按钮容器 */
+.index_qualification .qualificationSwiper .swiper-button {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+/* 轮播图按钮箭头修复 - 完全清除带尾巴箭头，使用简单字符箭头 */
+
+/* 基础容器设置 */
+.index_qualification {
+    position: relative;
+    z-index: 1;
+}
+
+.qualificationSwiper {
+    position: relative !important;
+    height: auto;
+    z-index: 1;
+}
+
+/* 轮播按钮容器 */
+.qualificationSwiper .swiper-button {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 9999 !important;
+    pointer-events: none;
+}
+
+/* 激进清除所有Swiper默认箭头和相关样式 */
+/* 1. 隐藏所有不是我们明确创建的Swiper按钮 */
+.qualificationSwiper [class*="swiper-button"]:not(.swiper-button > .swiper-button-prev):not(.swiper-button > .swiper-button-next) {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    position: absolute !important;
+    z-index: -1 !important;
+}
+
+/* 2. 完全禁用所有伪元素箭头（这是带尾巴箭头的主要来源） */
+*[class*="swiper-button"]::before,
+*[class*="swiper-button"]::after,
+.qualificationSwiper *[class*="swiper-button"]::before,
+.qualificationSwiper *[class*="swiper-button"]::after,
+.swiper-button-prev::before,
+.swiper-button-prev::after,
+.swiper-button-next::before,
+.swiper-button-next::after,
+.qualificationSwiper .swiper-button-prev::before,
+.qualificationSwiper .swiper-button-prev::after,
+.qualificationSwiper .swiper-button-next::before,
+.qualificationSwiper .swiper-button-next::after {
+    content: none !important;
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    background-image: none !important;
+    background: none !important;
+    position: absolute !important;
+    z-index: -1 !important;
+}
+
+/* 3. 清除所有可能的Swiper导航样式 */
+:root,
+.qualificationSwiper,
+.index_qualification {
+    --swiper-navigation-size: 0px !important;
+    --swiper-navigation-color: transparent !important;
+}
+
+/* 4. 彻底重置所有Swiper按钮的默认样式 */
+.swiper-button-prev,
+.swiper-button-next,
+.qualificationSwiper .swiper-button-prev,
+.qualificationSwiper .swiper-button-next {
+    --swiper-navigation-size: 0px !important;
+    --swiper-navigation-color: transparent !important;
+    background-image: none !important;
+    background: none !important;
+    transform: none !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: static !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto;
+}
+
+/* 5. 定义我们自己的左箭头按钮（简单字符 <） */
+.qualificationSwiper .swiper-button > .swiper-button-prev {
+    /* 基础按钮样式 */
+    width: 50px !important;
+    height: 50px !important;
+    background-color: #c22a29 !important;
+    border-radius: 50% !important;
+    border: none !important;
+    outline: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+    z-index: 9999 !important;
+    position: relative !important;
+    pointer-events: auto;
+    
+    /* 关键：使用纯文本字符作为箭头 */
+    font-family: Arial, sans-serif !important;
+    font-size: 36px !important; /* 大字体使其宽厚 */
+    font-weight: bold !important;
+    color: white !important;
+    text-align: center !important;
+    line-height: 50px !important;
+    
+    /* 确保没有其他样式干扰 */
+    background-image: none !important;
+    box-shadow: none !important;
+    text-indent: 0 !important;
+    overflow: visible !important;
+    white-space: nowrap !important;
+}
+
+/* 6. 定义我们自己的右箭头按钮（简单字符 >） */
+.qualificationSwiper .swiper-button > .swiper-button-next {
+    /* 基础按钮样式 */
+    width: 50px !important;
+    height: 50px !important;
+    background-color: #c22a29 !important;
+    border-radius: 50% !important;
+    border: none !important;
+    outline: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+    z-index: 9999 !important;
+    position: relative !important;
+    pointer-events: auto;
+    
+    /* 关键：使用纯文本字符作为箭头 */
+    font-family: Arial, sans-serif !important;
+    font-size: 36px !important; /* 大字体使其宽厚 */
+    font-weight: bold !important;
+    color: white !important;
+    text-align: center !important;
+    line-height: 50px !important;
+    
+    /* 确保没有其他样式干扰 */
+    background-image: none !important;
+    box-shadow: none !important;
+    text-indent: 0 !important;
+    overflow: visible !important;
+    white-space: nowrap !important;
+}
+
+/* 7. 确保容器优先级最高 */
+.index_qualification .qualificationSwiper .swiper-button {
+    position: absolute !important;
+    z-index: 9999 !important;
+    pointer-events: none;
+}
+
+/* 8. 确保我们的按钮可以正常点击 */
+.qualificationSwiper .swiper-button > .swiper-button-prev,
+.qualificationSwiper .swiper-button > .swiper-button-next {
+    pointer-events: auto !important;
+    user-select: none !important;
+}
+
+/* 完全移除所有默认箭头样式 */
+.swiper-button-prev::after,
+.swiper-button-next::after,
+.qualificationSwiper .swiper-button-prev::after,
+.qualificationSwiper .swiper-button-next::after,
+.index_qualification .qualificationSwiper .swiper-button-prev::after,
+.index_qualification .qualificationSwiper .swiper-button-next::after {
+    content: none !important; /* 完全移除内容 */
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    background-image: none !important;
+}
+
+/* 直接在按钮内容中设置白色箭头，而不是使用伪元素 */
+.swiper-button-prev,
+.qualificationSwiper .swiper-button-prev,
+.index_qualification .qualificationSwiper .swiper-button-prev {
+    color: white !important;
+    font-size: 32px !important;
+    font-weight: 900 !important;
+    text-align: center;
+    line-height: 50px; /* 垂直居中 */
+    left: -25px !important;
+}
+
+.swiper-button-next,
+.qualificationSwiper .swiper-button-next,
+.index_qualification .qualificationSwiper .swiper-button-next {
+    color: white !important;
+    font-size: 32px !important;
+    font-weight: 900 !important;
+    text-align: center;
+    line-height: 50px; /* 垂直居中 */
+    right: -25px !important;
+}
+
+/* 确保轮播按钮不使用任何图片背景 */
+.swiper-button-prev,
+.swiper-button-next,
+.qualificationSwiper .swiper-button-prev,
+.qualificationSwiper .swiper-button-next,
 .index_qualification .qualificationSwiper .swiper-button-prev,
-.index_qualification .qualificationSwiper .swiper-button-next{width: 40px; height: 40px; border-radius: 20px; opacity: 0.6;}
-.index_qualification .qualificationSwiper .swiper-button-prev{background: url("../images/arrow_left.png") center no-repeat #c22a29; left: 0;}
-.index_qualification .qualificationSwiper .swiper-button-next{background: url("../images/arrow_right.png") center no-repeat #c22a29; right: 0;}
-.index_qualification .qualificationSwiper .swiper-button-prev:hover,
-.index_qualification .qualificationSwiper .swiper-button-next:hover{opacity: 1;}
+.index_qualification .qualificationSwiper .swiper-button-next {
+    background-image: none !important; /* 确保不使用图片背景 */
+    background-color: #c22a29 !important; /* 强制红色背景 */
+}
+
+.qualificationSwiper .swiper-button-prev{
+    left: -25px !important;
+    background-image: none !important; /* 确保不使用图片背景 */
+}
+
+.qualificationSwiper .swiper-button-next{
+    right: -20px;
+    background-image: none !important; /* 确保不使用图片背景 */
+}
+
+/* 按钮容器样式 - 确保按钮正常显示 */
+.qualificationSwiper {
+    position: relative;
+    margin: 0 auto;
+    overflow: visible;
+}
+
 
 .index_feedback{padding: 50px 0 60px; background: #f5f5f5;}
 .index_feedback .com_title{text-align: center;}
@@ -102,10 +407,10 @@
 .index_feedback .feedbackSwiper .list{background: #fff; border-radius: 10px; box-sizing: border-box; padding: 20px 30px;}
 .index_feedback .feedbackSwiper .list::after{content: ''; display: table; clear: both;}
 .index_feedback .feedbackSwiper .list .text{font-size: 16px; line-height: 26px; height: 104px; color: #0e0e0e; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; overflow: hidden; text-overflow: ellipsis; margin-bottom: 20px;}
-.index_feedback .feedbackSwiper .list .icon{width: 80px; float: left;}
+.index_feedback .feedbackSwiper .list .icon{width: 80px; margin: 0 auto 15px; display: block;}
 .index_feedback .feedbackSwiper .list .icon img{width: 100%; border-radius: 50%;}
 .index_feedback .feedbackSwiper .list:hover .icon img{transition: all 1s; transform: rotateY(360deg)}
-.index_feedback .feedbackSwiper .list .name{width: calc(100% - 100px); float: right; padding-top: 10px; background: url("../images/customer.png") right center no-repeat;}
+.index_feedback .feedbackSwiper .list .name{width: 100%; text-align: center; padding-top: 0; background: none;}
 .index_feedback .feedbackSwiper .list .name h3{font-size: 20px; font-family: 'Poppins Bold'; color: #0e0e0e;}
 .index_feedback .feedbackSwiper .list .name p{font-size: 16px; font-family: 'Poppins Light'; color: #979797;}
 .index_feedback .swiper-pagination{bottom: 0;}
